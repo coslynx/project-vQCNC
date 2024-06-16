@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Token Generator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Discord Token Generator</h1>
+    </header>
+    
+    <main>
+        <section id="tokenGenerator">
+            <h2>Token Generator</h2>
+            <form id="tokenForm">
+                <label for="tokenAmount">Number of Tokens:</label>
+                <input type="number" id="tokenAmount" name="tokenAmount" min="1" max="10" required>
+                
+                <label for="tokenLength">Token Length:</label>
+                <input type="number" id="tokenLength" name="tokenLength" min="6" max="32" required>
+                
+                <label for="tokenComplexity">Token Complexity:</label>
+                <select id="tokenComplexity" name="tokenComplexity" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                
+                <button type="submit">Generate Tokens</button>
+            </form>
+            
+            <div id="tokenList"></div>
+        </section>
+        
+        <section id="settings">
+            <h2>Settings</h2>
+            <label for="expiration">Token Expiration:</label>
+            <input type="date" id="expiration" name="expiration" required>
+        </section>
+        
+        <section id="historyLog">
+            <h2>History Log</h2>
+            <ul id="logList"></ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2022 Discord Token Generator. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
